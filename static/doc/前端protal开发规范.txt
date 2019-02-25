@@ -1,0 +1,117 @@
+项目规范：（强制规范语法：开启ESlint验证）
+
+1、目录结构说明：
+
+    src  //为前端开发项目的代码
+
+        assets  //为静态资源文件  img
+
+        router  //为全部项目的路由模块文件
+
+        App.vue  //为主路由的容器入口
+
+        main.js  //为主项目的入口文件
+
+        utils   //工具类文件夹
+
+        store  //vuex状态管理
+
+        pages  //为项目的views模块文件夹（功能模块）
+
+2、命名规范
+    
+    标准变量命名使用驼峰式命名 例如（let thisIsMyName;）
+
+    常量全部大写，并使用下划线连接  例如（const MAX_COUNT = 10;）
+
+    构造函数大写第一个字母  例如（function Person(){}）
+
+    jquery对象必须以’$’开头命名  例如（let $body = $('body')）
+
+3、项目代码规范
+
+    变量声明尽量提在函数首部，用一个var声明，不允许出现连着的两个var声明(也包括let，const)；
+        //示例
+        function doSomethingWithItems(items) {
+            // use one var
+            var value = 10,
+                result = value + 10,
+                i,
+                len;
+
+            for (i = 0, len = items.length; i < len; i++) {
+                result += 10;
+            }
+        }
+
+    undefind使用规范（永远不要直接使用undefined进行变量判断，使用typeof 变量 === ’undefined’对变量进行判断。）
+
+    用’===’和’!==’代替’==’, ‘!=’
+
+    当大与4条或者5条判断时，选择switch判断，性能优化（switch当判断条件比较多时，性能比if-else快。但是没有if-else易读）
+
+    判断性能从左到右，（左是最快） switch >- if-else >-三目
+
+4、注释规范
+    4-1 函数注释
+        /**
+         * @func
+         * @desc 一个带参数的函数
+         * @param {string} a - 参数a
+         * @param {number} b=1 - 参数b默认值为1
+         * @param {string} c=1 - 参数c有两种支持的取值</br>1—表示x</br>2—表示xx
+         * @param {object} d - 参数d为一个对象
+         * @param {string} d.e - 参数d的e属性
+         * @param {string} d.f - 参数d的f属性
+         * @param {object[]} g - 参数g为一个对象数组
+         * @param {string} g.h - 参数g数组中一项的h属性
+         * @param {string} g.i - 参数g数组中一项的i属性
+         * @param {string} [j] - 参数j是一个可选参数
+         */
+        function foo(a, b, c, d, g, j) {
+            ...
+        }
+    4-2 单行注释
+        //注释内容
+    4-3  多行注释
+        /*
+         * 注释内容
+         * 注释内容
+         */
+
+vue方法的使用
+
+    Prop 定义应该尽量详细。在你提交的代码中，prop 的定义应该尽量详细，至少需要指定其类型。
+
+    为v-for设置键值，总是用 key 配合 v-for。
+
+    避免 v-if 和 v-for 用在一起
+
+    为组件样式设置作用域  <style scoped></style>
+
+    如果需要返回上一页： this.$router.go(-1)   history.go(-1)是回到浏览器上一页，但是由于Vue应用是单页应用，浏览器的访问历史未必和Vue的浏览历史相同。
+
+    //传参
+    this.$router.push({
+        path: "/path",query:{query:queryThings}
+    })
+    //接受参数
+    let query = this.$route.query.queryThings;
+
+    click事件如果无法触发，尝试加上native，或者self修饰符
+
+    // 只当事件是从侦听器绑定的元素本身触发时才触发回调
+    @click.self="showBox"
+    // 监听组件根元素的原生事件
+    @click.native="showBox"
+
+    :class="[MeauShrinkFlag ?'cpack_right':'cpack_right MeauShrink']"
+
+
+
+
+
+
+
+
+

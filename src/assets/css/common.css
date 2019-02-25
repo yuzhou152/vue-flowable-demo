@@ -1,0 +1,27 @@
+/**
+ * 所有列表单文件组件样式统一
+ */
+.table_list {
+  padding-bottom: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+}
+.typeButton {
+  border:none;
+  color: #fff;
+  border-radius:4px;
+  font-size: 12px;
+  font-weight: 800;
+}
+.table_list_title {
+  margin-bottom: 0 !important;
+  padding: 10px;
+}
+.demo-form-inline {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,.2);
+}
