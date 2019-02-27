@@ -37,6 +37,26 @@ const Routers = new Router({
           path: 'workbench/task/task2/:ordercode/:taskid/:processInstanceId',
           name: '任务详情',
           component: resolve => require(['@/views/workbench/task/instance/task2'], resolve)
+        },
+        {
+          path: 'workbench/task/task3/:ordercode/:taskid/:processInstanceId',
+          name: '任务详情',
+          component: resolve => require(['@/views/workbench/task/instance/task3'], resolve)
+        },
+        {
+          path: 'workbench/task/task4/:ordercode/:taskid/:processInstanceId',
+          name: '任务详情',
+          component: resolve => require(['@/views/workbench/task/instance/task4'], resolve)
+        },
+        {
+          path: 'workbench/task/task5/:ordercode/:taskid/:processInstanceId',
+          name: '任务详情',
+          component: resolve => require(['@/views/workbench/task/instance/task5'], resolve)
+        },
+        {
+          path: 'workbench/task/task6/:ordercode/:taskid/:processInstanceId',
+          name: '任务详情',
+          component: resolve => require(['@/views/workbench/task/instance/task6'], resolve)
         }
       ]
     }, {

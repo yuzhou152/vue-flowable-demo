@@ -68,7 +68,7 @@
           const _this = this;
           this.$axios.get(this.$api.flowableapi+"repository/process-definitions",{
             params: {
-              size: 100
+              size: 500
             }
           })
             .then(function (response) {

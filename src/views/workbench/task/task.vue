@@ -373,7 +373,6 @@
             this.$message.warning("Please choose the data you want to deal.")
             return;
           }
-          console.log(`${this.dealingData.category}${this.dealingData.orderCode}/${this.dealingData.id}/${this.dealingData.processInstanceId}`)
           this.$router.push(`${this.dealingData.category}${this.dealingData.orderCode}/${this.dealingData.id}/${this.dealingData.processInstanceId}`);
         },
         dealServiceData(taskCategory, ordercode, taskId, processInstanceId) {
